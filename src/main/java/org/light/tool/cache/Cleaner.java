@@ -1,8 +1,6 @@
-package org.light.lighttoolspringbootstarter.cache;
+package org.light.tool.cache;
 
 import com.alibaba.fastjson.support.spring.FastJsonRedisSerializer;
-import com.fasterxml.jackson.databind.ser.std.StringSerializer;
-import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 

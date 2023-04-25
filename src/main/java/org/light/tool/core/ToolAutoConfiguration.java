@@ -1,9 +1,9 @@
-package org.light.lighttoolspringbootstarter.core;
+package org.light.tool.core;
 
-import org.light.lighttoolspringbootstarter.cache.Cleaner;
-import org.light.lighttoolspringbootstarter.cache.MultiCache;
-import org.light.lighttoolspringbootstarter.config.RedisTemplateConfig;
-import org.light.lighttoolspringbootstarter.properties.MultiCacheProperties;
+import org.light.tool.cache.Cleaner;
+import org.light.tool.cache.MultiCache;
+import org.light.tool.config.RedisTemplateConfig;
+import org.light.tool.properties.MultiCacheProperties;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.context.annotation.Import;
 

@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-org.light.lighttoolspringbootstarter.core.ToolAutoConfiguration
+org.light.tool.core.ToolAutoConfiguration

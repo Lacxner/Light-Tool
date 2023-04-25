@@ -1,11 +1,11 @@
-package org.light.lighttoolspringbootstarter.cache;
+package org.light.tool.cache;
 
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
 import io.netty.util.HashedWheelTimer;
 import io.netty.util.Timeout;
 import io.netty.util.TimerTask;
-import org.light.lighttoolspringbootstarter.properties.MultiCacheProperties;
+import org.light.tool.properties.MultiCacheProperties;
 import org.redisson.api.RBloomFilter;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;

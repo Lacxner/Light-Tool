@@ -1,4 +1,4 @@
-package org.light.lighttoolspringbootstarter.utils;
+package org.light.tool.utils;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;

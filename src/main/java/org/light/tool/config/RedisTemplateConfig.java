@@ -1,8 +1,8 @@
-package org.light.lighttoolspringbootstarter.config;
+package org.light.tool.config;
 
 import com.alibaba.fastjson.support.spring.FastJsonRedisSerializer;
 import com.alibaba.fastjson.support.spring.GenericFastJsonRedisSerializer;
-import org.light.lighttoolspringbootstarter.cache.Cleaner;
+import org.light.tool.cache.Cleaner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

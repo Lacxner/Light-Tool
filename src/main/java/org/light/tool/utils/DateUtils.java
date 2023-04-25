@@ -1,4 +1,4 @@
-package org.light.lighttoolspringbootstarter.utils;
+package org.light.tool.utils;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
@@ -396,11 +396,59 @@ public final class DateUtils {
     }
 
     /**
+     * 获取某月第一天
+     * @return 日期
+     */
+    public static LocalDate getMonthFirstDay(LocalDate date) {
+        return date.with(TemporalAdjusters.firstDayOfMonth());
+    }
+
+    /**
+     * 获取本月最小日期时间
+     * @return 日期
+     */
+    public static LocalDateTime getMonthMinDatetime() {
+        return LocalDateTime.of(LocalDate.now().with(TemporalAdjusters.firstDayOfMonth()), LocalTime.MIN);
+    }
+
+    /**
+     * 获取本月最小日期时间
+     * @return 日期
+     */
+    public static LocalDateTime getMonthMinDatetime(LocalDate date) {
+        return LocalDateTime.of(date.with(TemporalAdjusters.firstDayOfMonth()), LocalTime.MIN);
+    }
+
+    /**
      * 获取本月最后一天
      * @return 日期
      */
     public static LocalDate getMonthLastDay() {
         return LocalDate.now().with(TemporalAdjusters.lastDayOfMonth());
+    }
+
+    /**
+     * 获取某月最后一天
+     * @return 日期
+     */
+    public static LocalDate getMonthLastDay(LocalDate date) {
+        return date.with(TemporalAdjusters.lastDayOfMonth());
+    }
+
+    /**
+     * 获取本月最大日期时间
+     * @return 日期
+     */
+    public static LocalDateTime getMonthMaxDatetime() {
+        return LocalDateTime.of(LocalDate.now().with(TemporalAdjusters.lastDayOfMonth()), LocalTime.MAX);
+    }
+
+    /**
+     * 获取本月最大日期时间
+     * @return 日期
+     */
+    public static LocalDateTime getMonthMaxDatetime(LocalDate date) {
+        return LocalDateTime.of(date.with(TemporalAdjusters.lastDayOfMonth()), LocalTime.MAX);
     }
 
     /**
@@ -412,7 +460,15 @@ public final class DateUtils {
     }
 
     /**
-     * 获取本月第一天
+     * 获取某个日期下个月的第一天
+     * @return 日期
+     */
+    public static LocalDate getNextMonthFirstDay(LocalDate date) {
+        return date.with(TemporalAdjusters.firstDayOfNextMonth());
+    }
+
+    /**
+     * 获取本年第一天
      * @return 日期
      */
     public static LocalDate getYearFirstDay() {
@@ -420,7 +476,7 @@ public final class DateUtils {
     }
 
     /**
-     * 获取本月最后一天
+     * 获取本年最后一天
      * @return 日期
      */
     public static LocalDate getYearLastDay() {
@@ -475,6 +531,16 @@ public final class DateUtils {
      */
     public static long getBetweenMinutes(Temporal startInclusive, Temporal endExclusive) {
         return ChronoUnit.MINUTES.between(startInclusive, endExclusive);
+    }
+
+    /**
+     * 获取两个时间区间小时数
+     * @param startInclusive 开始区间（包含）
+     * @param endExclusive 结束区间（不包含）
+     * @return 小时数
+     */
+    public static long getBetweenHours(Temporal startInclusive, Temporal endExclusive) {
+        return ChronoUnit.HOURS.between(startInclusive, endExclusive);
     }
 
     /**
